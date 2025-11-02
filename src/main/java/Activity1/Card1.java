@@ -34,9 +34,9 @@ public class Card1 {
 	 */
 	public Card1(String cardRank, String cardSuit, int cardPointValue) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-		this.cardRank = rank;
-		this.cardSuit = suit;
-		this.cardPointValue = pointValue;
+		rank = cardRank;
+		suit = cardSuit;
+		pointValue = cardPointValue;
 	}
 
 
@@ -75,10 +75,12 @@ public class Card1 {
 	 *              are equal to those of the argument;
 	 *         false otherwise.
 	 */
-	public boolean matches(Card1 otherCard) {
-		if(otherCard == this.Card) return true
-		else return false;
-	}
+	public boolean matches(Card otherCard) {
+    if(otherCard.suit().equals(this.suit()) && otherCard.rank().equals(this.rank()) && otherCard.pointValue() == this.pointValue())
+      return true;
+    else
+      return false;
+  }
 
 	/**
 	 * Converts the rank, suit, and point value into a string in the format
@@ -92,8 +94,6 @@ public class Card1 {
 	 */
 	@Override
 	public String toString() {
-		return "Card rank is: " + rank + " Card suit is: "+ suit + " Card pointValue is " + pointValue;
-		
-
-	}
+    return rank + " of " + suit + " (point value = " + pointValue + ")";
+  }
 }

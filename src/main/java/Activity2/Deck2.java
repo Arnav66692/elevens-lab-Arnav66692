@@ -32,6 +32,9 @@ public class Deck2 {
 	 */
 	public Deck2(String[] ranks, String[] suits, int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		for(int i = 0; i < ranks.length(); i++){
+        	Card card = new Card(ranks[i], suits[i], values[i]);    //Creates new card by matching the params.
+      		cards[i] = card;
 	}
 
 
@@ -41,7 +44,7 @@ public class Deck2 {
 	 */
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		return true;
+		return cards.isEmpty();
 	}
 
 	/**
@@ -50,7 +53,7 @@ public class Deck2 {
 	 */
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-		return -1;
+		return cards.size();
 	}
 
 	/**
